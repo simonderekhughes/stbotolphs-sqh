@@ -1,0 +1,6 @@
+Replace minio s3 compatible object store with AWS S3 bucket.
+
+The following provides more information on this commit:
+- Remove the minio service from the docker-compose.yml file.
+- Add terrform deploy/main.tf file to automatically create the S3 bucket.
+- Modify env/webapp.env file to point to AWS S3 bucket.
