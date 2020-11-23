@@ -233,6 +233,10 @@ if 'DJANGO_USE_AWS' in os.environ:
 
     # Configure file storage
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+    # Setting AWS_QUERYSTRING_AUTH to False to remove query parameter authentication from generated URLs.
+    # This can be useful if your S3 buckets are public.
+    AWS_QUERYSTRING_AUTH = False
 else:
     logging.warning('Not using S3 to store files. Container is not stateless.')
 
